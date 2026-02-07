@@ -367,15 +367,23 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center; /* centraliza melhor no desktop */
+  gap: 1rem; /* diminui o espaço entre imagem e botão */
 }
 
+/* Imagem */
 .material-imagem img {
-  max-width: 600px; /* controla tamanho da imagem */
+  max-width: 400px;
   height: auto;
-  border-radius: 0px;
-  border: 0px solid rgba(212, 165, 116, 0.2);
+  border-radius: 8px;
+  border: 2px solid rgba(212, 165, 116, 0.2);
+}
+
+/* Botão */
+.material-link {
+  display: flex;
+  justify-content: center; /* garante centralização */
+  align-items: center;
 }
 
 .btn-drive {
@@ -400,6 +408,35 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
 }
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  .material-container {
+    flex-direction: column;   /* empilha imagem e botão */
+    align-items: center;      /* centraliza tudo */
+    text-align: center;
+    gap: 1rem;                /* espaço menor entre eles */
+  }
+
+  .material-imagem img {
+    max-width: 100%;          /* ocupa toda a largura */
+    height: auto;
+  }
+
+  .material-link {
+    margin-top: 1rem;         /* aproxima mais do botão */
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* centraliza botão */
+  }
+
+  .btn-drive {
+    width: 100%;              /* botão ocupa largura total */
+    max-width: 300px;         /* limite opcional */
+  }
+}
+
+
 
 
         /* ========== CONTATO ========== */
