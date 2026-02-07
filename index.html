@@ -349,63 +349,59 @@
             border: none;
         }
         
-        /* ========== DEPOIMENTOS ========== */
-        .depoimentos {
-            padding: 8rem 2rem;
-            background: var(--cor-principal);
-        }
-        
-        .depoimentos h2 {
-            font-size: 3rem;
-            color: var(--cor-acento);
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .depoimentos-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        
-        .depoimento-item {
-            background: var(--cor-secundaria);
-            border: 2px solid rgba(212, 165, 116, 0.2);
-            padding: 2rem;
-            transition: all 0.4s ease;
-        }
-        
-        .depoimento-item:hover {
-            border-color: var(--cor-acento);
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        /* TAMANHO PADRÃO PARA IMAGENS DE DEPOIMENTO: 400x300px */
-        /* Crie suas imagens no Canva com esse tamanho */
-        .depoimento-imagem {
-            width: 100%;
-            height: 300px;
-            background: var(--cor-principal);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--cor-acento);
-            font-size: 1rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(212, 165, 116, 0.2);
-        }
-        
-        /* Quando adicionar as imagens de depoimento: */
-        .depoimento-imagem img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
+/* ========== MATERIAL GRATUITO ========== */
+.material-gratuito {
+  padding: 8rem 2rem;
+  background: var(--cor-principal);
+}
+
+.material-gratuito h2 {
+  font-size: 3rem;
+  color: var(--cor-acento);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.material-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.material-imagem img {
+  max-width: 400px; /* controla tamanho da imagem */
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid rgba(212, 165, 116, 0.2);
+}
+
+.btn-drive {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background: var(--cor-acento);
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--cor-acento);
+}
+
+.btn-drive:hover {
+  background: transparent;
+  color: var(--cor-acento);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+}
+
+
         /* ========== CONTATO ========== */
         .contato {
             padding: 8rem 2rem;
@@ -539,7 +535,7 @@
             .inicio,
             .bio,
             .trabalhos,
-            .depoimentos,
+            .material-gratuito,
             .contato {
                 padding: 4rem 1.5rem;
             }
@@ -554,7 +550,7 @@
                 gap: 2rem;
             }
             
-            .depoimentos-container {
+            .material-gratuito-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -562,7 +558,7 @@
             .experiencia-texto h2,
             .bio-texto h2,
             .trabalhos h2,
-            .depoimentos h2,
+            .material-gratuito h2,
             .contato h2 {
                 font-size: 2.2rem;
             }
@@ -607,7 +603,7 @@
             .inicio,
             .bio,
             .trabalhos,
-            .depoimentos,
+            .material-gratuito,
             .contato {
                 padding: 3rem 1rem;
             }
@@ -620,7 +616,7 @@
             .experiencia-texto h2,
             .bio-texto h2,
             .trabalhos h2,
-            .depoimentos h2,
+            .material-gratuito h2,
             .contato h2 {
                 font-size: 1.8rem;
             }
@@ -651,7 +647,7 @@
             .experiencia-texto h2,
             .bio-texto h2,
             .trabalhos h2,
-            .depoimentos h2,
+            .material-gratuito h2,
             .contato h2 {
                 font-size: 1.5rem;
             }
@@ -669,7 +665,7 @@
             <a href="#inicio">Início</a>
             <a href="#bio">Bio</a>
             <a href="#trabalhos">Trabalhos</a>
-            <a href="#depoimentos">Depoimentos</a>
+            <a href="#material-gratuito">material-gratuito</a>
             <a href="#contato">Contato</a>
         </div>
     </nav>
@@ -766,58 +762,43 @@ Sua produção artística concentra-se na escrita de obras modernas, com forte i
                 
                 <div class="video-item">
                     <div class="video-placeholder">
-                        Vídeo 2 - Adicione o link do YouTube aqui
+                        Em breve...
                     </div>
                 </div>
                 
                 <div class="video-item">
                     <div class="video-placeholder">
-                        Vídeo 3 - Adicione o link do YouTube aqui
+                        Em breve...
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== DEPOIMENTOS ========== -->
-    <section class="depoimentos" id="depoimentos">
-        <div class="container">
-            <h2>Depoimentos</h2>
-            
-            <div class="depoimentos-container">
-                <!-- ============================================ -->
-                <!-- ADICIONE SUAS 3 IMAGENS DE DEPOIMENTO AQUI -->
-                <!-- Tamanho padrão: 400x300px (crie no Canva) -->
-                <!-- ============================================ -->
-                
-                <div class="depoimento-item">
-                    <div class="depoimento-imagem">
-                        Depoimento 1<br>
-                        (400x300px no Canva)
-                    </div>
-                    <!-- Quando adicionar imagem, use:
-                    <div class="depoimento-imagem">
-                        <img src="depoimento1.png" alt="Depoimento 1">
-                    </div>
-                    -->
-                </div>
-                
-                <div class="depoimento-item">
-                    <div class="depoimento-imagem">
-                        Depoimento 2<br>
-                        (400x300px no Canva)
-                    </div>
-                </div>
-                
-                <div class="depoimento-item">
-                    <div class="depoimento-imagem">
-                        Depoimento 3<br>
-                        (400x300px no Canva)
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ========== MATERIAL GRATUITO ========== -->
+<section class="material-gratuito" id="material-gratuito">
+  <div class="container">
+    <h2>Material Gratuito</h2>
+    
+    <div class="material-container">
+      <!-- Lado esquerdo: imagem -->
+      <div class="material-imagem">
+        <img src="material.png" alt="Material gratuito">
+      </div>
+      
+      <!-- Lado direito: botão -->
+      <div class="material-link">
+        <a href="https://drive.google.com/SEU-LINK" 
+           class="btn-drive" 
+           target="_blank">
+           Acessar no Google Drive
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- ========== CONTATO ========== -->
     <section class="contato" id="contato">
@@ -881,7 +862,7 @@ Sua produção artística concentra-se na escrita de obras modernas, com forte i
             </p>
             
             <p class="copyright">
-                © 2026 Todos os direitos reservados
+                © 2026 | Todos os direitos reservados
             </p>
         </div>
     </footer>
