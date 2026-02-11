@@ -241,11 +241,12 @@
             align-items: center;
         }
         
-        .bio-fotos {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
+       .bio-fotos {
+    display: flex;          /* ou block */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+}
+
         
         .foto-item {
             aspect-ratio: 3/4;
