@@ -96,88 +96,63 @@
             width: 100%;
         }
         
-        /* ========== CABEÇALHO / HERO ========== */
-        .cabecalho {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: linear-gradient(135deg, var(--cor-principal) 0%, var(--cor-secundaria) 100%);
-            overflow: hidden;
-        }
-        
-        .cabecalho::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 165, 116, 0.08) 0%, transparent 50%);
-            animation: pulse 8s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        .logo-container {
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            animation: fadeInUp 1.2s ease-out;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* ESPAÇO PARA O LOGO/ASSINATURA - você vai adicionar a imagem aqui */
-        .logo-placeholder {
-            width: auto;
-            max-width: none;
-            height: auto;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px dashed rgba(212, 165, 116, 0.3);
-            border-radius: 8px;
-            background: rgba(212, 165, 116, 0.05);
-        }
-        
-        .logo-placeholder p {
-            color: var(--cor-acento);
-            font-size: 1.2rem;
-            font-style: italic;
-        }
-        
-        /* Quando você adicionar a imagem, use esta classe: */
-        .logo-imagem {
-            max-width: none;
-            width: auto;
-            height: auto;
-        }
-        
-        .tagline {
-            margin-top: 2rem;
-            font-size: 1.5rem;
-            color: var(--cor-texto-suave);
-            font-weight: 300;
-            letter-spacing: 2px;
-            animation: fadeInUp 1.5s ease-out;
-        }
+/* ========== CABEÇALHO / HERO ========== */
+.cabecalho {
+    min-height: 100vh;              /* ocupa toda a altura da tela */
+    display: flex;
+    align-items: center;            /* centraliza verticalmente */
+    justify-content: center;        /* centraliza horizontalmente */
+    position: relative;
+    background: linear-gradient(135deg, var(--cor-principal) 0%, var(--cor-secundaria) 100%);
+    overflow: hidden;
+}
+
+.cabecalho::before {
+    content: '';
+    position: absolute;
+    inset: 0;                       /* cobre toda a área */
+    background: url('foto-2.jpeg') center/cover no-repeat;
+    opacity: 0.15;                  /* 15% de opacidade */
+    z-index: -1;                    /* fica atrás do conteúdo */
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.logo-container {
+    text-align: center;
+    position: relative;
+    z-index: 10;                    /* garante que a logo e o texto fiquem acima do fundo */
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.logo-imagem {
+    max-width: 300px;               /* controla o tamanho da assinatura */
+    height: auto;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--cor-acento);
+    margin-top: 1rem;
+}
+
+/* Animação suave para entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de pulsar no fundo */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
         
         /* ========== INÍCIO / EXPERIÊNCIA ========== */
         .inicio {
@@ -387,7 +362,7 @@
 
 .btn-drive {
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1.5rem;
   background: var(--cor-acento);
   color: var(--cor-principal);
   text-decoration: none;
