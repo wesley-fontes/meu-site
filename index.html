@@ -114,15 +114,29 @@
     z-index: 1;
 }
 
-/* Imagem de fundo com opacidade - camada do meio */
+        /* Imagem de fundo com opacidade E gradiente nas bordas */
 .cabecalho::after {
     content: '';
     position: absolute;
     inset: 0;                       
-    background: url('foto-3.jpeg') center/cover no-repeat;
+    background: url('foto-7.jpeg') center/cover no-repeat;
     opacity: 0.15;                  
     z-index: 2;
     animation: pulse 8s ease-in-out infinite;
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
 }
 
 /* PNG (assinatura) - camada de cima */
@@ -161,6 +175,9 @@
     0%, 100% { opacity: 0.15; }
     50% { opacity: 0.10; }
 }
+
+
+        
         /* ========== INÍCIO / EXPERIÊNCIA ========== */
         .inicio {
             padding: 8rem 2rem;
