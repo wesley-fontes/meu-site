@@ -98,10 +98,10 @@
         
 /* ========== CABEÇALHO / HERO ========== */
 .cabecalho {
-    min-height: 100vh;              /* ocupa toda a altura da tela */
+    min-height: 100vh;              
     display: flex;
-    align-items: center;            /* centraliza verticalmente */
-    justify-content: center;        /* centraliza horizontalmente */
+    align-items: center;            
+    justify-content: center;        
     position: relative;
     background: linear-gradient(135deg, var(--cor-principal) 0%, var(--cor-secundaria) 100%);
     overflow: hidden;
@@ -110,22 +110,22 @@
 .cabecalho::before {
     content: '';
     position: absolute;
-    inset: 0;                       /* cobre toda a área */
+    inset: 0;                       
     background: url('foto-3.jpeg') center/cover no-repeat;
-    opacity: 0.15;                  /* 15% de opacidade */
-    z-index: -1;                    /* fica atrás do conteúdo */
+    opacity: 0.15;                  
+    z-index: -1;                    
     animation: pulse 8s ease-in-out infinite;
 }
 
 .logo-container {
     text-align: center;
     position: relative;
-    z-index: 10;                    /* garante que a logo e o texto fiquem acima do fundo */
+    z-index: 10;                    
     animation: fadeInUp 1.2s ease-out;
 }
 
 .logo-imagem {
-    max-width: 800px;               /* controla o tamanho da assinatura */
+    max-width: 1000px;               
     height: auto;
 }
 
@@ -152,6 +152,7 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
 }
+
 
         
         /* ========== INÍCIO / EXPERIÊNCIA ========== */
