@@ -95,7 +95,6 @@
         .menu-fixo a:hover::after {
             width: 100%;
         }
-        
 /* ========== CABEÇALHO / HERO ========== */
 .cabecalho {
     min-height: 100vh;              
@@ -103,24 +102,34 @@
     align-items: center;            
     justify-content: center;        
     position: relative;
-    background: linear-gradient(135deg, var(--cor-principal) 0%, var(--cor-secundaria) 100%);
     overflow: hidden;
 }
 
+/* Gradiente - camada de baixo */
 .cabecalho::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--cor-principal) 0%, var(--cor-secundaria) 100%);
+    z-index: 1;
+}
+
+/* Imagem de fundo com opacidade - camada do meio */
+.cabecalho::after {
     content: '';
     position: absolute;
     inset: 0;                       
     background: url('foto-3.jpeg') center/cover no-repeat;
     opacity: 0.15;                  
-    z-index: -1;                    
+    z-index: 2;
     animation: pulse 8s ease-in-out infinite;
 }
 
+/* PNG (assinatura) - camada de cima */
 .logo-container {
     text-align: center;
     position: relative;
-    z-index: 10;                    
+    z-index: 3;                    
     animation: fadeInUp 1.2s ease-out;
 }
 
@@ -149,12 +158,9 @@
 
 /* Animação de pulsar no fundo */
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.10; }
 }
-
-
-        
         /* ========== INÍCIO / EXPERIÊNCIA ========== */
         .inicio {
             padding: 8rem 2rem;
